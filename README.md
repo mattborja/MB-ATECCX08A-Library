@@ -38,7 +38,7 @@ result:		status=OK, res=FFFF 0000 FFFF 0000 FFFF 0000 FFFF 0000 FFFF 0000 FFFF 0
 | `..........101069c4e0d86a7b0430d8cdb78070b4c55a` | `status=OK, res=0011 2233 4455 6677 8899 aabb ccdd eeff`                                         | AES-128 decrypt vector (C.1, FIPS-197) (ATECC608A only; NDA, see LEGAL.md) | 7/1/2023    |
 
 ### Application Notes
-- "The ATECC608A has an error in the I2C circuitry, where the device may respond incorrectly under certain conditions" (p.3, DS40002237A, Microchip). The issue is resolved in its replacement part, **ATECC608B**.
+- "The ATECC608A has an error in the I2C circuitry, where the device may respond incorrectly under certain conditions" (p.3, [DS40002237A](https://www.mouser.com/pdfDocs/Migrating-from-the-ATECC608A-to-the-ATECC608B-DS40002237A.pdf), Microchip). The issue is resolved in its replacement part, **ATECC608B**.
 - "Prior to the configuration zone being locked, the RNG produces a value of `0xFF, 0xFF, 0x00, 0x00, 0xFF, 0xFF, 0x00, 0x00` to facilitate testing." (p. 81, DS20005927A)
 
 ## License
