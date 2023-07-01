@@ -17,7 +17,7 @@ bool ateccx08_cmd(uint8_t input[256], ...) { ... }
 
 #### Examples
 ##### `Random()`
-Opcode: `0x1B` (Table 9-4, p. 57, DS20005927A)
+Opcode: `0x1B` (Table 9-4, p. 57, [DS20005927A](https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/20005928A.pdf))
 
 Generate a random number.
 ```bash
