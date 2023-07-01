@@ -46,3 +46,7 @@ See [LICENSE](/LICENSE) within this repository.
 
 ## Legal Notice
 See [LEGAL.md](/LEGAL.md) within this repository.
+
+## Contact
+- Open a [new issue](https://github.com/mattborja/MB-ATECCX08A-Library/issues)
+- Send an email to: [mb-ateccx08a-library.area473@passmail.com](mailto:mb-ateccx08a-library.area473@passmail.com)
