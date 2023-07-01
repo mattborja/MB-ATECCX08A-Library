@@ -123,19 +123,6 @@ bool ateccx08_cmd(uint8_t input[256], bool debug = false)
   return false;
 }
 
-/*
- * Deserializes 512-byte serial input as 256-byte input packet sent directly to ATECCX08 at I2C address specified
- * input: [addr:1][opcode:1][param1:1][param2:2][outlen:1][datalen:1][data:datalen] (datalen:0x00-0xf9)
- *
- * Tested (6/30/23):
- * - 501b0000002000 — Random()
- * - ..........0110000102030405060708090a0b0c0d0e0f - AES-128 key vector (C.1, FIPS-197) (ATECC608A only; NDA, see LEGAL.md)
- * - ..........101000112233445566778899aabbccddeeff - AES-128 encrypt vector (C.1, FIPS-197) (ATECC608A only; NDA, see LEGAL.md)
- * - ..........101069c4e0d86a7b0430d8cdb78070b4c55a - AES-128 decrypt vector (C.1, FIPS-197) (ATECC608A only; NDA, see LEGAL.md)
- *
- * Notes:
- * - "The ATECC608A has an error in the I2C circuitry, where the device may respond incorrectly under certain conditions" (p.3, DS40002237A, Microchip). The issue is resolevd in its replacement part, ATECC608B.
- */
 void ateccx08_serial_loop()
 {
   while (Serial.available())
