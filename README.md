@@ -1,5 +1,5 @@
 # MB-ATECCX08A-Library
-Arduino C development library and program interface for ATECCX08A by [Matt Borja](https://mattborja.dev/).
+Arduino C development library and program interface for ATECCX08A by [Matt Borja](https://mattborja.dev/) (PGP: `F30F F4FC 9365 8457 4EE3 2518 3368 8C2E DC08 CD38`).
 
 ## Purpose
 To canonicalize a subset of ongoing research and development in cryptographic applications and hardware-based implementations. The attached libraries are provided with their respective program interfaces for testing and are intended for academic use only (see LICENSE).
