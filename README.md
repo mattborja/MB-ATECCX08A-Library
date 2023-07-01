@@ -1,4 +1,6 @@
 # MB-ATECCX08A-Library
+Status: **Development**
+
 Arduino C development library and program interface for ATECCX08A by [Matt Borja](https://mattborja.dev/) (PGP: `F30F F4FC 9365 8457 4EE3 2518 3368 8C2E DC08 CD38`).
 
 ## Purpose
