@@ -32,12 +32,7 @@ result:		status=OK, res=FFFF 0000 FFFF 0000 FFFF 0000 FFFF 0000 FFFF 0000 FFFF 0
 ```
 
 ### Test Vectors
-| Input                                            | Result                                                                                           | Description                                                                | Last tested |
-|--------------------------------------------------|--------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|-------------|
-| `501b0000002000`                                 | `status=OK, res=FFFF 0000 FFFF 0000 FFFF 0000 FFFF 0000 FFFF 0000 FFFF 0000 FFFF 0000 FFFF 0000` | `Random()`                                                                 | 7/1/2023    |
-| `..........0110000102030405060708090a0b0c0d0e0f` | `status=OK, res=00`                                         | AES-128 key vector (C.1, FIPS-197) (ATECC608A only; NDA, see LEGAL.md)     | 7/1/2023    |
-| `..........101000112233445566778899aabbccddeeff` | `status=OK, res=69c4 e0d8 6a7b 0430 d8cd b780 70b4 c55a`                                         | AES-128 encrypt vector (C.1, FIPS-197) (ATECC608A only; NDA, see LEGAL.md) | 7/1/2023    |
-| `..........101069c4e0d86a7b0430d8cdb78070b4c55a` | `status=OK, res=0011 2233 4455 6677 8899 aabb ccdd eeff`                                         | AES-128 decrypt vector (C.1, FIPS-197) (ATECC608A only; NDA, see LEGAL.md) | 7/1/2023    |
+See [TestVectors.csv](/TestVectors.csv).
 
 ### Application Notes
 - "The ATECC608A has an error in the I2C circuitry, where the device may respond incorrectly under certain conditions" (p.3, [DS40002237A](https://www.mouser.com/pdfDocs/Migrating-from-the-ATECC608A-to-the-ATECC608B-DS40002237A.pdf), Microchip). The issue is resolved in its replacement part, **ATECC608B**.
