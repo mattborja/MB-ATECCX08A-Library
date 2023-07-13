@@ -36,7 +36,7 @@ Note: The following procedures demonstrates modifying factory settings found for
 
 6) Read from interface to verify changes: `50 02 00 0005 04 00` (dev: 0x50, read: 4 bytes; zone: Config; block 0; offset: 5; out: 4 bytes; in: 0 bytes; result: `8300 8720`)
 
-Note: Original settings may be reverted by issuing the same command (#6) using the values returned in the prelimiary Read operation (#4).
+Note: Original settings may be reverted by issuing the same Write command (#5) using the values returned in the prelimiary Read operation (#4).
 
 ## Application Notes
 - "The ATECC608A has an error in the I2C circuitry, where the device may respond incorrectly under certain conditions" (p.3, [DS40002237A](https://www.mouser.com/pdfDocs/Migrating-from-the-ATECC608A-to-the-ATECC608B-DS40002237A.pdf), Microchip). The issue is resolved in its replacement part, **ATECC608B**.
