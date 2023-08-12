@@ -1,13 +1,13 @@
 input,result,opCode,description
-50 02 80 0000 20 00,...,Read,32 bytes of Config zone at block 0 offset 0
-50 02 80 0008 20 00,...,Read,32 bytes of Config zone at block 1 offset 0
-50 02 80 0010 20 00,...,Read,32 bytes of Config zone at block 2 offset 0
-50 02 80 0018 20 00,...,Read,32 bytes of Config zone at block 3 offset 0
-50 47 00 0000 01 00,00,SHA,Start
-50 47 02 0003 20 03 616263,BA78 16BF 8F01 CFEA 4141 40DE 5DAE 2223 B003 61A3 9617 7A9C B410 FF61 F200 15AD,SHA,End(`abc`)
-50 1b 00 0000 20 00,FFFF 0000 FFFF 0000 FFFF 0000 FFFF 0000 FFFF 0000 FFFF 0000 FFFF 0000 FFFF 0000,Random,Unlocked
-50 02 00 0005 04 00,8320 8720,Read,4 bytes for SlotConfig<1> via Config zone at block 0 offset 5 (factory settings)
-50 12 00 0005 01 04 83008720,00,Write,4 bytes for SlotConfig<1> via Config zone at block 0 offset 5 (personalized)
-50 02 00 0005 04 00,8300 8720,Read,4 bytes for SlotConfig<1> via Config zone at block 0 offset 5 (personalized)
-50 12 00 0005 01 04 83208720,00,Write,4 bytes for SlotConfig<1> via Config zone at block 0 offset 5 (factory settings restored)
-50 02 00 0005 04 00,8320 8720,Read,4 bytes for SlotConfig<1> via Config zone at block 0 offset 5 (factory settings restored)
+50028000002000,...,Read,32 bytes of Config zone at block 0 offset 0
+50028000082000,...,Read,32 bytes of Config zone at block 1 offset 0
+50028000102000,...,Read,32 bytes of Config zone at block 2 offset 0
+50028000182000,...,Read,32 bytes of Config zone at block 3 offset 0
+50470000000100,00,SHA,Start
+50470200032003616263,BA78 16BF 8F01 CFEA 4141 40DE 5DAE 2223 B003 61A3 9617 7A9C B410 FF61 F200 15AD,SHA,End(`abc`)
+501b0000002000,FFFF 0000 FFFF 0000 FFFF 0000 FFFF 0000 FFFF 0000 FFFF 0000 FFFF 0000 FFFF 0000,Random,Unlocked
+50020000050400,8320 8720,Read,4 bytes for SlotConfig<1> via Config zone at block 0 offset 5 (factory settings)
+5012000005010483008720,00,Write,4 bytes for SlotConfig<1> via Config zone at block 0 offset 5 (personalized)
+50020000050400,8300 8720,Read,4 bytes for SlotConfig<1> via Config zone at block 0 offset 5 (personalized)
+5012000005010483208720,00,Write,4 bytes for SlotConfig<1> via Config zone at block 0 offset 5 (factory settings restored)
+50020000050400,8320 8720,Read,4 bytes for SlotConfig<1> via Config zone at block 0 offset 5 (factory settings restored)
