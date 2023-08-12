@@ -2,6 +2,9 @@
 **Purpose.** The below table of slots is provided for the planning of their respective usage. It is intended to be used in conjunction with the **ATECC508A Configuration Tool** by Matt Borja (release pending).
 
 For a complete reference of the Data Zone, see Section 2.1 ("EEPROM Data Zone") of the [ATECC508A CryptoAuthentication Device Complete Data Sheet](https://content.arduino.cc/assets/mkr-microchip_atecc508a_cryptoauthentication_device_summary_datasheet-20005927a.pdf).
+
+For more information on the encoding format defined by Microchip for optimal certificate storage, see the corresponding [Compressed Certificate Definition application note](https://ww1.microchip.com/downloads/en/AppNotes/Atmel-8974-CryptoAuth-ATECC-Compressed-Certificate-Definition-ApplicationNote.pdf).
+
 | Slot | Blocks | Bytes | Bits | Typical Use                                                                   | Usage |
 |------|--------|-------|------|-------------------------------------------------------------------------------|-------|
 | 0    | 2      | 36    | 288  | Private, Secret Key                                                           |       |
