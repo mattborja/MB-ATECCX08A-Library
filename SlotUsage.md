@@ -1,5 +1,5 @@
 # Slot Usage (Planning)
-**Purpose.** The below table of slots is provided for the planning of their respective usage. It is intended to be used in conjunction with the **ATECC508A Configuration Tool** by Matt Borja (release pending).
+**Purpose.** The below table of slots is provided with their factory state configuration for the planning of their respective usage. It is intended to be used in conjunction with the **ATECC508A Configuration Tool** by Matt Borja (release pending).
 
 For a complete reference of the Data Zone, see Section 2.1 ("EEPROM Data Zone") of the [ATECC508A CryptoAuthentication Device Complete Data Sheet](https://content.arduino.cc/assets/mkr-microchip_atecc508a_cryptoauthentication_device_summary_datasheet-20005927a.pdf).
 
