@@ -15,3 +15,4 @@ input<dev:1><op:1><p1:1><p2:2><outLen:1><inLen:1><data:inLen>,result,op,descript
 50020000110400,FFFF FFFF,Read,Read 4 bytes from config at block 2 offset 1
 50020000150400,0000 5555,Read,Read 4 bytes from config at block 2 offset 5 (UserExtra / Selector / LockValue / LockConfig)
 501700....0100,00,Lock,Permanently locks configuration zone if its CRC-16 value parameter (P2) has been verified
+50020000150400,0000 5500,Read,4-byte read after permanently locking configuration zone at block 2 offset 5
