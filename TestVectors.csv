@@ -22,4 +22,4 @@ input<dev:1><op:1><p1:1><p2:2><outLen:1><inLen:1><data:inLen>,result,op,descript
 50418000004000,...<64>,Sign,Sign the contents of TempKey (SHA256 of `abc`) using key in slot 0. Does not include 48 bits corresponding to SN<2:3> and SN<4:7>
 50470000000100,00,SHA,Start SHA engine
 50470200032003616263,BA78 16BF 8F01 CFEA 4141 40DE 5DAE 2223 B003 61A3 9617 7A9C B410 FF61 F200 15AD,SHA,Finalize SHA over string `abc` and store copy in TempKey
-50450200040180...<128>,00,Verify,Verify signature<64> and public key<64> (input data) against message stored in TempKey using External Mode and corresponding KeyType (P-256)
+50450200040180...<128>,00,Verify,Verify signature<64> and public key<64> (input data) against message stored in TempKey using External Mode and corresponding KeyType (P-256). Note that verifing will reset TempKey.
