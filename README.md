@@ -38,6 +38,21 @@ Note: The following procedures demonstrates modifying factory settings found for
 
 Note: Original settings may be reverted by issuing the same Write command (#5) using the values returned in the prelimiary Read operation (#4).
 
+## Configuration Zone Locking Procedures
+⚠️ Warning: Following these procedures will result in the device's configuration zone being permanently locked. Proceed at your own risk.
+1) Collect and conduct a final review the device's entire 128-byte configuration zone before proceeding.
+   - `50028000002000` — 32 bytes of Config zone at block 0 offset 0
+   - `50028000082000` — 32 bytes of Config zone at block 1 offset 0
+   - `50028000102000` — 32 bytes of Config zone at block 2 offset 0
+   - `50028000182000` — 32 bytes of Config zone at block 3 offset 0
+2) Perform a CRC-16 over the 128-byte buffer using the cited polynomial (0x8005).
+3) Review the current status of LockConfig to verify configuration is still unlocked (0x55)
+   - `50020000150400` — Read 4 bytes from config at block 2 offset 5: UserExtra / Selector / LockValue / LockConfig)
+5) If everything looks correct, issue the `Lock` command using the summary check bit option (bit 7 of param 1 set to 0) where CCCC represents the previously calculated 16-bit CRC
+   - `501700CCCC0100` - Permanently locks configuration zone if its CRC-16 value parameter (P2) has been verified
+6) Verify the updated value of LockConfig is now set (0x00)
+   - `50020000150400` - 4-byte read after permanently locking configuration zone at block 2 offset 5
+
 ## Application Notes
 - "The ATECC608A has an error in the I2C circuitry, where the device may respond incorrectly under certain conditions" (p.3, [DS40002237A](https://www.mouser.com/pdfDocs/Migrating-from-the-ATECC608A-to-the-ATECC608B-DS40002237A.pdf), Microchip). The issue is resolved in its replacement part, **ATECC608B**.
 - "Prior to the configuration zone being locked, the RNG produces a value of `0xFF, 0xFF, 0x00, 0x00, 0xFF, 0xFF, 0x00, 0x00` to facilitate testing." (p. 81, DS20005927A)
