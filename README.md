@@ -40,6 +40,7 @@ Note: Original settings may be reverted by issuing the same Write command (#5) u
 
 ## Configuration Zone Locking Procedures
 ⚠️ Warning: Following these procedures will result in the device's configuration zone being permanently locked. Proceed at your own risk.
+ℹ️ It is not strictly necessary to lock the OTP/data zones in order to use certain cryptographic commands (i.e. `Random`, `Sign`, `Verify`).
 1) Collect and conduct a final review the device's entire 128-byte configuration zone before proceeding.
    - `50028000002000` — 32 bytes of Config zone at block 0 offset 0
    - `50028000082000` — 32 bytes of Config zone at block 1 offset 0
